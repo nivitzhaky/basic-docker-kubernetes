@@ -12,10 +12,6 @@ docker exec -it <container_id> bash
 docker compose down
 ```
 
-```sh
-# Build image locally
-docker build -t todo-api:latest .
-```
 
 The API will be available at http://localhost:8000.
 
@@ -27,6 +23,12 @@ The API will be available at http://localhost:8000.
 - `GET /todos/{id}`
 - `PATCH /todos/{id}` (body: `{ "title": "...", "is_done": true }`)
 - `DELETE /todos/{id}`
+
+
+```sh
+# Build image locally
+docker build -t todo-api:latest .
+```
 
 ## Kubernetes with Minikube 
 
@@ -76,10 +78,6 @@ kubectl delete pod <pod_name>
 
 4. **Access the API**:
 ```sh
-# Port forward (recommended)
-kubectl port-forward svc/todo-api-service 8000:8000
-
-# Or use minikube service
 minikube service todo-api-service
 ```
 

@@ -5,11 +5,6 @@ A minimal FastAPI todo API backed by Postgres, with Alembic migrations and Docke
 ## Quick start
 
 ```sh
-alembic upgrade head
-```
-
-
-```sh
 docker compose up --build
 docker ps
 docker logs -f <container_id>

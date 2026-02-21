@@ -10,6 +10,19 @@ docker ps
 docker logs -f <container_id>
 docker exec -it <container_id> bash
 docker compose down
+## or instead docker kill <container_id>
+```
+
+## Alembic commands
+
+```sh
+alembic init alembic
+
+alembic revision --autogenerate -m "describe change"
+
+alembic revision -m "describe change"
+
+alembic upgrade head
 ```
 
 
